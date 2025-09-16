@@ -1,0 +1,27 @@
+{
+  "name": "portafolio-web",
+  "version": "1.0.0",
+  "description": "Presento mi portafolio como desarrollador\r Aquí encontrarás mis proyectos, habilidades y experiencias en el mundo del desarrollo web y software.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SantyxD19/Mi-Portafolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SantyxD19/Mi-Portafolio/issues"
+  },
+  "homepage": "https://github.com/SantyxD19/Mi-Portafolio#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
