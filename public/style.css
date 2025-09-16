@@ -1,0 +1,167 @@
+/* Estilo Dark / Neon */
+
+/* Barras neon moradas centradas verticalmente */
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  top: 50%;               /* centra verticalmente */
+  transform: translateY(-50%);
+  width: 10px;             /* grosor de la barra */
+  height: 200px;           /* alto de la barra */
+  background: #b200ff;     /* morado neon */
+  box-shadow: 0 0 15px #b200ff, 0 0 30px #b200ff; /* glow */
+  border-radius: 5px;      /* bordes redondeados */
+}
+
+body::before {
+  left: 20px;              /* distancia desde el borde izquierdo */
+}
+
+body::after {
+  right: 20px;             /* distancia desde el borde derecho */
+}
+
+
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+background: radial-gradient(circle at top left, #0d0d0d, #111, #0a0a0a);
+  color: #fff;
+}
+
+header, main, footer {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+header h1 {
+  font-size: 2.5em;
+  color: #0ff; /* cyan neon */
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #0ff;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #f0f;
+  text-shadow: 0 0 5px #f0f;
+}
+
+/* Menú */
+nav ul.menu {
+  list-style: none;       /* elimina los puntos */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+  padding: 0;
+}
+
+nav ul.menu li a {
+  color: #0ce5ec;              /* morado neon */
+  text-decoration: none;        /* quita subrayado */
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 8px 15px;            /* un poco de espacio interno */
+  border-radius: 5px;           /* bordes suaves */
+  transition: 0.3s;
+  background-color: transparent; /* eliminamos el gris */
+  box-shadow: 0 0 10px #b200ff; /* glow neon */
+}
+
+nav ul.menu li a:hover {
+  color: #fff;                   /* blanco al pasar mouse */
+  box-shadow: 0 0 20px #b200ff, 0 0 40px #b200ff; /* glow más fuerte al hover */
+}
+
+
+main {
+  max-width: 900px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #f0f; /* rosa neon */
+  margin-bottom: 15px;
+  text-shadow: 0 0 5px #f0f;
+}
+
+ul li {
+  list-style: none;       /* quita puntos */
+  background-color: #111; /* más oscuro para contrastar */
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #f0f; /* glow neon rosa */
+  transition: 0.3s;
+}
+
+ul li:hover {
+  box-shadow: 0 0 25px #0ff, 0 0 35px #f0f; /* efecto glow al pasar mouse */
+}
+
+footer {
+  margin-top: 60px;                 /* espacio desde main */
+  padding: 20px 0;                  /* espacio interno */
+  background-color: #1a1a1a;        /* gris oscuro */
+  color: #0ff;                      /* neon cyan */
+  text-align: center;
+  font-size: 1em;
+  border-top: 3px solid #f0f;       /* línea neon rosa */
+  box-shadow: 0 -5px 15px rgba(0,255,255,0.5); /* glow neon */
+  border-radius: 10px 10px 0 0;     /* esquinas redondeadas arriba */
+}
+
+
+.skill {
+  display: flex;
+  align-items: center;
+  gap: 15px;            /* espacio entre logo y contenido */
+  margin: 15px 0;
+  text-align: left;
+}
+
+.skill-logo {
+  width: 40px;           /* tamaño de los logos */
+  height: 40px;
+  object-fit: contain;   /* mantiene proporción */
+  filter: drop-shadow(0 0 5px #b200ff); /* glow neon alrededor del logo */
+}
+
+.skill p {
+  margin: 0;
+  color: #ff00ff;        /* neon rosa */
+  font-weight: bold;
+  text-shadow: 0 0 5px #ff00ff;
+}
+
+.skill-bar {
+  flex-grow: 1;          /* la barra ocupa el resto del espacio */
+  height: 15px;
+  background-color: #222;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b200ff;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;            /* se ajusta con style="width: xx%" */
+  background: linear-gradient(90deg, #b200ff, #0ff, #ff00ff);
+  box-shadow: 0 0 15px #b200ff, 0 0 20px #0ff, 0 0 25px #ff00ff;
+  border-radius: 10px;
+  transition: width 0.5s ease-in-out;
+}
