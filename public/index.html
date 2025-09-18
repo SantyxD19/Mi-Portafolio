@@ -10,65 +10,141 @@
     <title>Document</title>
 </head>
 <body>  
+    <div class="background-animation">
+  <img src="img/control-de-juego.png" alt="Control 1" style="--start-y:0.8; --start-scale:0.6; --start-rot:10deg;">
+  <img src="img/control-de-juego.png" alt="Control 2" style="--start-y:0.5; --start-scale:0.5; --start-rot:5deg;">
+  <img src="img/control-de-juego.png" alt="Control 3" style="--start-y:0.6; --start-scale:0.4; --start-rot:0deg;">
+  <img src="img/control-de-juego.png" alt="Control 4" style="--start-y:0.7; --start-scale:0.5; --start-rot:-10deg;">
+  <img src="img/control-de-juego.png" alt="Control 5" style="--start-y:0.9; --start-scale:0.6; --start-rot:15deg;">
+</div>
     <header>
         <h1>Hola soy Santiago</h1>
         <p>Bienvenido a mi portafolio</p>
         <nav>
+             <button class="menu-toggle" id="menu-toggle">☰</button>
             <ul class="menu">
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#Habilidades">Habilidades</a></li>
-                <li><a href="#Contacto">Contacto</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
         <section id="proyectos">
-            <h2>Proyectos</h2>
-            <ul>
-                <li>Proyecto 1</li>
-                <li>Proyecto 2</li>
-                <li>Proyecto 3</li>
-            </ul>
-        </section>
+  <h2>Mis Proyectos</h2>
+  <div class="projects-container">
 
-        <section id="habilidades">
-  <h2>Habilidades</h2>
+    <div class="project-card">
+      <img src="img/proyecto1.png" alt="Proyecto 1">
+      <h3>Proyecto 1</h3>
+      <p>Un portafolio moderno con diseño oscuro y efectos neon.</p>
+      <div class="buttons">
+        <a href="https://github.com/SantyxD19/proyecto1" target="_blank">Código</a>
+        <a href="https://proyecto1-demo.com" target="_blank">Demo</a>
+      </div>
+    </div>
 
-  <div class="skill">
-    <img src="img/Node.js_logo.svg" alt="Node.js Logo" class="skill-logo">
-    <p>Node.js</p>
-    <div class="skill-bar" style="width: 90%;"></div>
-  </div>
+    <div class="project-card">
+      <img src="img/proyecto2.png" alt="Proyecto 2">
+      <h3>Proyecto 2</h3>
+      <p>Aplicación web con Node.js y Express.</p>
+      <div class="buttons">
+        <a href="https://github.com/SantyxD19/proyecto2" target="_blank">Código</a>
+        <a href="https://proyecto2-demo.com" target="_blank">Demo</a>
+      </div>
+    </div>
 
-  <div class="skill">
-    <img src="img/express.png" alt="Express Logo" class="skill-logo">
-    <p>Express</p>
-    <div class="skill-bar" style="width: 85%;"></div>
-  </div>
+    <div class="project-card">
+      <img src="img/proyecto3.png" alt="Proyecto 3">
+      <h3>Proyecto 3</h3>
+      <p>Juego simple en JavaScript con estilo retro gamer 🎮.</p>
+      <div class="buttons">
+        <a href="https://github.com/SantyxD19/proyecto3" target="_blank">Código</a>
+        <a href="https://proyecto3-demo.com" target="_blank">Demo</a>
+      </div>
+    </div>
 
-  <div class="skill">
-    <img src="img/javascript.png" alt="JavaScript Logo" class="skill-logo">
-    <p>JavaScript</p>
-    <div class="skill-bar" style="width: 95%;"></div>
-  </div>
-
-  <div class="skill">
-    <img src="img/HTML5_logo_and_wordmark.svg" alt="HTML & CSS Logo" class="skill-logo">
-    <p>HTML & CSS</p>
-    <div class="skill-bar" style="width: 90%;"></div>
   </div>
 </section>
 
 
-        <section id="Contacto">
-                <h2>Contacto</h2>
-                <p>Email:Santiagomacea19@gmail.com</p>
-        </section>
+        <section id="Habilidades">
+  <h2>Habilidades</h2>
+
+  <div class="skills-category">
+    <h3>Frontend</h3>
+    <div class="skills-logos">
+      <div class="skill">
+        <img src="img/html.svg" alt="HTML5">
+        <p>HTML5</p>
+      </div>
+      <div class="skill">
+        <img src="img/CSS3_logo.svg" alt="CSS3">
+        <p>CSS3</p>
+      </div>
+      <div class="skill">
+        <img src="img/javascript.svg" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills-category">
+    <h3>Backend</h3>
+    <div class="skills-logos">
+      <div class="skill">
+        <img src="img/Node.js_logo.svg" alt="Node.js">
+        <p>Node.js</p>
+      </div>
+      <div class="skill">
+        <img src="img/expressjs-ar21~bgwhite.svg" alt="Express.js">
+        <p>Express.js</p>
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
+
+    <section id="contacto">
+            <h2>Contacto</h2>
+        <p>¿Quieres trabajar conmigo o tienes alguna idea en mente? Escríbeme 🚀</p>
+
+        <form action="https://formspree.io/f/tu-endpoint" method="POST">
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Correo</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mensaje</label>
+             <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+     <div class="socials">
+        <a href="https://github.com/SantyxD19" target="_blank">GitHub</a>
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+     </div>
+    </section>
+
     </main>
 
     <footer>
         <p>&copy; 2025 Santy - Todos los derechos reservados</p>
+        <div class="socials">
+        <a href="https://github.com/tuusuario" target="_blank">GitHub</a>
+        <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+  </div>
     </footer>
     
     <script src="funciones.js"></script>

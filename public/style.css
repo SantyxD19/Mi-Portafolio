@@ -8,7 +8,7 @@ body::after {
   top: 50%;               /* centra verticalmente */
   transform: translateY(-50%);
   width: 10px;             /* grosor de la barra */
-  height: 200px;           /* alto de la barra */
+  height: 70%;           /* alto de la barra */
   background: #b200ff;     /* morado neon */
   box-shadow: 0 0 15px #b200ff, 0 0 30px #b200ff; /* glow */
   border-radius: 5px;      /* bordes redondeados */
@@ -28,7 +28,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-background: radial-gradient(circle at top left, #0d0d0d, #111, #0a0a0a);
+background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #2a003f 100%);
   color: #fff;
 }
 
@@ -52,31 +52,34 @@ header p {
 }
 
 /* Menú */
-nav ul.menu {
-  list-style: none;       /* elimina los puntos */
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 20px;
+nav ul {
+  list-style: none;           /* quita los punticos */
+  display: flex;              /* pone los li en fila */
+  justify-content: center;    /* centra horizontalmente */
+  gap: 2rem;                  /* espacio entre items */
+  padding: 0;
+  margin: 0;
+  background: transparent;    /* sin cuadros de fondo */
+}
+
+nav li {
+  margin: 0;
   padding: 0;
 }
 
-nav ul.menu li a {
-  color: #0ce5ec;              /* morado neon */
-  text-decoration: none;        /* quita subrayado */
-  font-weight: bold;
-  font-size: 1.2em;
-  padding: 8px 15px;            /* un poco de espacio interno */
-  border-radius: 5px;           /* bordes suaves */
-  transition: 0.3s;
-  background-color: transparent; /* eliminamos el gris */
-  box-shadow: 0 0 10px #b200ff; /* glow neon */
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
 }
 
-nav ul.menu li a:hover {
-  color: #fff;                   /* blanco al pasar mouse */
-  box-shadow: 0 0 20px #b200ff, 0 0 40px #b200ff; /* glow más fuerte al hover */
+nav a:hover {
+  color: #9b4dff;
+  text-shadow: 0 0 10px #9b4dff, 0 0 20px #9b4dff;
 }
+
+
 
 
 main {
@@ -111,7 +114,8 @@ ul li:hover {
 footer {
   margin-top: 60px;                 /* espacio desde main */
   padding: 20px 0;                  /* espacio interno */
-  background-color: #1a1a1a;        /* gris oscuro */
+  background: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
   color: #0ff;                      /* neon cyan */
   text-align: center;
   font-size: 1em;
@@ -121,47 +125,376 @@ footer {
 }
 
 
-.skill {
-  display: flex;
-  align-items: center;
-  gap: 15px;            /* espacio entre logo y contenido */
-  margin: 15px 0;
-  text-align: left;
+#skills {
+  padding: 50px 20px;
+  text-align: center;
 }
 
-.skill-logo {
-  width: 40px;           /* tamaño de los logos */
-  height: 40px;
-  object-fit: contain;   /* mantiene proporción */
-  filter: drop-shadow(0 0 5px #b200ff); /* glow neon alrededor del logo */
+.skills-category {
+  margin-bottom: 40px;
+}
+
+.skills-category h3 {
+  color: #bb86fc; /* morado neón */
+  margin-bottom: 20px;
+}
+
+.skills-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.skill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.skill img, 
+.skill svg {
+  width: 60px;   /* o el tamaño que quieras */
+  height: 60px;
+  object-fit: contain;
+}
+
+
+.skill:hover {
+  transform: scale(1.1);
 }
 
 .skill p {
+  color: #ffffff;
+  font-size: 14px;
   margin: 0;
-  color: #ff00ff;        /* neon rosa */
-  font-weight: bold;
-  text-shadow: 0 0 5px #ff00ff;
 }
 
-.skill-bar {
-  flex-grow: 1;          /* la barra ocupa el resto del espacio */
-  height: 15px;
-  background-color: #222;
-  border-radius: 10px;
-  box-shadow: 0 0 10px #b200ff;
-  position: relative;
-  overflow: hidden;
+#contacto {
+  border-radius: 25px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: #1a1a1a;
+  color: #fff;
 }
 
-.skill-bar::after {
-  content: '';
-  position: absolute;
+#contacto h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #9b4dff;
+  text-shadow: 0 0 10px #9b4dff;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  text-align: left;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #222;
+  color: #fff;
+  font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #9b4dff;
+  box-shadow: 0 0 10px #9b4dff;
+}
+
+button {
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #9b4dff;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #6a1b9a;
+  box-shadow: 0 0 20px #9b4dff;
+}
+
+.socials {
+  margin-top: 2rem;
+}
+
+.socials a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #9b4dff;
+  text-shadow: 0 0 10px #9b4dff;
+}
+
+#proyectos {
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2d185f, #0a0014, #100218);
+  color: #fff;
+}
+
+#proyectos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #9b4dff;
+  text-shadow: 0 0 10px #9b4dff;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(155, 77, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 25px #9b4dff;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card h3 {
+  margin: 0.5rem 0;
+  color: #fff;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.project-card .buttons a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.6rem 1rem;
+  background: #9b4dff;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.project-card .buttons a:hover {
+  background: #6a1b9a;
+  box-shadow: 0 0 15px #9b4dff;
+}
+
+
+
+
+/* ========================= */
+/* Responsive Design */
+/* ========================= */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 1024px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .skills-logos {
+    gap: 20px;
+  }
+}
+
+/* Celulares grandes */
+@media (max-width: 768px) {
+  header, main, footer {
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  header p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;   /* menú en columna */
+    gap: 1rem;
+  }
+
+  .skills-logos {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .projects-container {
+    grid-template-columns: 1fr; /* proyectos en una sola columna */
+  }
+}
+
+/* Celulares pequeños */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .skill img, 
+  .skill svg {
+    width: 50px;
+    height: 50px;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+/* BOTÓN MENÚ HAMBURGUESA */
+/* menú base */
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+/* Botón hamburguesa oculto en escritorio */
+.menu-toggle {
+  display: none;
+}
+
+
+/* versión mobile */
+/* versión mobile */
+/* versión mobile */
+@media (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(18, 18, 18, 0.95); /* más oscuro, semi-transparente */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.6);
+    z-index: 1000;
+
+    max-height: 0;           /* oculto por defecto */
+    overflow: hidden;        /* oculta contenido */
+    transition: max-height 0.4s ease-in-out; /* animación */
+  }
+
+  .menu.open {
+    max-height: 300px; /* al abrir, se despliega */
+    padding: 20px 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #9b4dff;
+  }
+
+  .menu li {
+    margin: 15px 0; /* espacio entre items */
+  }
+}
+
+
+
+
+
+/* Fondo animado con controles flotando */
+.background-animation {
+  position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   height: 100%;
-  width: 100%;            /* se ajusta con style="width: xx%" */
-  background: linear-gradient(90deg, #b200ff, #0ff, #ff00ff);
-  box-shadow: 0 0 15px #b200ff, 0 0 20px #0ff, 0 0 25px #ff00ff;
-  border-radius: 10px;
-  transition: width 0.5s ease-in-out;
+  overflow: hidden;
+  z-index: -1;
 }
+
+.background-animation img {
+  position: absolute;
+  width: 40px; /* tamaño base del control */
+  opacity: 0;  /* empieza invisible */
+  animation: float 12s linear infinite;
+}
+
+/* Keyframes de animación */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(0.5) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.2; /* empieza a aparecer suavemente */
+  }
+  50% {
+    transform: translateY(50vh) scale(0.8) rotate(15deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1) rotate(30deg);
+    opacity: 0; /* desaparece al final */
+  }
+}
+
+/* Cada img con posición y delay distinto para efecto desfasado */
+.background-animation img:nth-child(1) { left: 10%; animation-delay: 0s; width:50px; }
+.background-animation img:nth-child(2) { left: 30%; animation-delay: 0s; width:60px; }
+.background-animation img:nth-child(3) { left: 50%; animation-delay: 0s; width:40px; }
+.background-animation img:nth-child(4) { left: 70%; animation-delay: 0s; width:55px; }
+.background-animation img:nth-child(5) { left: 90%; animation-delay: 0s; width:45px; }
+
+/* Opcional: variar opacidad para odd/even */
+.background-animation img:nth-child(odd) { opacity: 0.15; }
+.background-animation img:nth-child(even) { opacity: 0.25; }
+
+
+
+
