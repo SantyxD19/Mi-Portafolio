@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 /* Estilo Dark / Neon */
 
 /* Barras neon moradas centradas verticalmente */
@@ -245,6 +248,43 @@ button:hover {
   text-shadow: 0 0 10px #9b4dff;
 }
 
+/* Contenedor de botones de contacto */
+.contact-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* WhatsApp */
+.whatsapp-contact {
+  margin-top: 2rem;
+}
+
+.whatsapp-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 0 15px #25d366;
+  transition: 0.3s;
+}
+
+.whatsapp-contact a:hover {
+  background: #1ebe57;
+  box-shadow: 0 0 25px #25d366;
+}
+
+.whatsapp-contact img {
+  width: 24px;
+  height: 24px;
+}
+
 #proyectos {
   border-radius: 20px;
   padding: 4rem 2rem;
@@ -312,6 +352,10 @@ button:hover {
   background: #6a1b9a;
   box-shadow: 0 0 15px #9b4dff;
 }
+
+
+
+
 
 
 
@@ -446,7 +490,6 @@ button:hover {
 
 
 
-
 /* Fondo animado con controles flotando */
 .background-animation {
   position: fixed;
@@ -495,6 +538,90 @@ button:hover {
 .background-animation img:nth-child(odd) { opacity: 0.15; }
 .background-animation img:nth-child(even) { opacity: 0.25; }
 
+
+
+/* Sección Sobre mí */
+#sobre-mi {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2d185f, #0a0014, #100218);
+  color: #fff;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+#sobre-mi h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #9b4dff;
+  text-shadow: 0 0 10px #9b4dff;
+}
+
+/* Contenedor con foto y texto */
+.sobre-mi-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Foto */
+.foto-perfil img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #9b4dff;
+  box-shadow: 0 0 20px #9b4dff;
+  transition: transform 0.3s ease;
+}
+
+.foto-perfil img:hover {
+  transform: scale(1.05);
+}
+
+/* Texto e info */
+.info-sobre-mi {
+  max-width: 500px;
+  text-align: left;
+}
+
+.info-sobre-mi p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Botón descargar CV */
+.download-cv {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  background: #9b4dff;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #9b4dff;
+  transition: 0.3s;
+}
+
+.download-cv:hover {
+  background: #802cb4;
+  box-shadow: 0 0 25px #9b4dff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-mi-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-sobre-mi {
+    text-align: center;
+  }
+}
 
 
 
