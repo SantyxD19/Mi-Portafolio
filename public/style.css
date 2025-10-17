@@ -623,5 +623,95 @@ button:hover {
   }
 }
 
+/* ============================= */
+/* SECCIÓN DE CERTIFICADOS */
+/* ============================= */
 
+#certificados {
+  border-radius: 20px;
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(180deg, #2d185f, #0a0014, #100218);
+  color: #fff;
+  margin-bottom: 60px;
+}
 
+#certificados h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #b388ff;
+  text-shadow: 0 0 10px #b388ff;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Contenedor de tarjetas */
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Centra la tercera tarjeta cuando hay tres */
+.certificados-grid .certificado-card:nth-child(3) {
+  grid-column: span 2;
+  justify-self: center;
+  max-width: 320px;
+}
+
+/* Tarjetas individuales */
+.certificado-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: left;
+  box-shadow: 0 0 20px rgba(179, 136, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 25px #b388ff;
+}
+
+.certificado-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #b388ff;
+}
+
+.certificado-card h3 {
+  color: #b388ff;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+.certificado-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+/* Botón */
+.btn-ver {
+  display: inline-block;
+  background: #b388ff;
+  color: #0d0d0f;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn-ver:hover {
+  background: #d0b6ff;
+  box-shadow: 0 0 20px #b388ff;
+}
